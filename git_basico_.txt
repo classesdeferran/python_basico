@@ -32,4 +32,5 @@ git rm --cached nom_de_fichero
 Para pasar a commit (ficheros validados)
 git commit -m "mensaje"
 
-
+git remote add origin https://github.com/mi_cuenta/nombre_del_repo.git
+git branch -M main
