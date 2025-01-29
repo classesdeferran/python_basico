@@ -29,5 +29,7 @@ git add .
 Para volver a la fase inicial
 git rm --cached nom_de_fichero
 
+Para pasar a commit (ficheros validados)
+git commit -m "mensaje"
 
 
