@@ -84,3 +84,10 @@ print(frase.replace("a", "i"))
 palabras_en_frase = frase.split(" ")
 print(palabras_en_frase)
 print(len(palabras_en_frase))
+
+print( 10 > 5 )
+print( "abeja" > "flor")
+
+
+# Mini ejercicio 
+texto = "bUeNos dÍAs" # Buenos días
