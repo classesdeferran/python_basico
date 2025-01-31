@@ -46,3 +46,10 @@ print( 1 <= 1) # True
 verdadero = True
 # True = False # Error crítico de sintaxis
 print( "True es", True )
+
+# MÉTODOS PARA NÚMEROS 
+# redondear un número a la izquierda o derecha
+redondear_izquierda = round(3.14159265359, 2) # valor a redondear, número de decimales
+
+# Valor absoluto
+valor_absoluto = abs(-5) # 5

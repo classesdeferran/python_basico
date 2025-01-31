@@ -6,6 +6,10 @@ string_1 = 'Hola'
 string_2 = "Hola"
 string_3 = """Hola"""
 
+# Python puede ordenar alfabéticamente
+print( 10 > 5 )
+print( "abeja" > "flor")
+
 # Mini ejercicio 
 # nombre = 
 # apellido = 
@@ -74,9 +78,9 @@ print(http.endswith(".com"))
 # Verificar si el texto es convertible a numero
 numero = "10"
 print(int(numero))
-print(numero.isnumeric()) # solo numeros
-print(numero.isalpha()) # solo texto
-print(numero.isalnum())
+print(numero.isnumeric()) # SOLO NÚMEROS ENTEROS
+print(numero.isalpha()) # SOLO LETRAS
+print(numero.isalnum()) # NÚMEROS Y LETRAS
 
 # Cambiar caracteres
 print(frase.replace("a", "i"))
@@ -85,8 +89,11 @@ palabras_en_frase = frase.split(" ")
 print(palabras_en_frase)
 print(len(palabras_en_frase))
 
-print( 10 > 5 )
-print( "abeja" > "flor")
+texto_con_espacios = "            Hola que haces       "
+texto_sin_espacios = texto_con_espacios.strip()
+print("texto_sin_espacios", texto_sin_espacios)
+
+
 
 
 # Mini ejercicio 
