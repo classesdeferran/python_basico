@@ -21,7 +21,15 @@ Consideraremos que el nombre de cada usuario es único
 import os
 os.system("cls")
 
+def add_user(new_user, users) :
+    user_dic = {"nombre":new_user, "visitas": 0 }
+    users.append(user_dic)
+    return f"Usuario {new_user} añadido correctamente"
+
+
 users = []
+users_name = [] # lista para guardar los nombres de los usuarios 
+
 while True:
     menu = """
 1. Añadiremos un usuario 
@@ -41,24 +49,37 @@ X. Salir
             if users:
                 # si ya hay algún usuario en la lista
                 # debemos verificar que no coincida con new_user
-                users_name = [] # lista para guardar los nombres de los usuarios 
+                
                 for user in users:
                     # Obtenemos y guardamos los nmbres de los usarios
                     users_name.append(user['nombre'])
 
                 # Si el nombre no está en la lista lo añadimos
                 if new_user not in users_name:
-                    user_dic = {"nombre":new_user, "visitas": 0 }
-                    users.append(user_dic)
-                    print(f"Usuario {new_user} añadido correctamente")
+                    print(add_user(new_user, users))
                 else:
                     print("El usuario ya existe")
             else:
-                user_dic = {"nombre":new_user, "visitas": 0 }
-                users.append(user_dic)
-                print(f"Usuario {new_user} añadido correctamente")
+                print(add_user(new_user, users))
         case "2":       
-            pass
+            if users:
+                # Preguntar el nombre del usuario
+                user_name = input("Nombre del usuario --> ").strip().title()
+
+                existe_usuario = False
+                for usuario in users:
+                    if user_name == usuario.get("nombre"):
+                        usuario['visitas'] += 1
+                        existe_usuario = True
+                        break
+                
+                if existe_usuario:
+                    print(f"Visita incorporada correctamente a {user_name}")
+                else:
+                    print(f"No existe un usuario con nombre {user_name}")
+
+            else:
+                print("No hay usuarios todavía")
         case "3":
             pass
         case "4":
